@@ -1,0 +1,241 @@
+@prefix : <http://tour-pedia.org/download/tp.owl> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://purl.org/vocab/frbr/core#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@base <http://tour-pedia.org/download/tp.owl> .
+
+<http://tour-pedia.org/download/tp.owl> rdf:type owl:Ontology ;
+                                         owl:imports <http://www.semanticweb.org/ontologies/2012/4/accommodation-17042012.owl> ,
+                                                     prov: ;
+                                         dc:creator "Angelica Lo Duca" ;
+                                         dc:title "Tourpedia Ontology" ;
+                                         terms:description "A vocabulary to describe touristic places: accommodations, points of interest, restaurants and attractions." ;
+                                         terms:issued "2014-06-08" ;
+                                         terms:license "http://creativecommons.org/licenses/by/1.0/" ;
+                                         terms:modified "2015-06-08" ;
+                                         terms:rights "Copyright © 2015 Tourpedia" ;
+                                         vann:preferredNamespacePrefix "tp" ;
+                                         rdfs:comment "A vocabulary to describe touristic places: accommodations, points of interest, restaurants and attractions." ;
+                                         rdfs:isDefinedBy "http://tour-pedia.org/download/tp.owl" ;
+                                         rdfs:label "Tourpedia Ontology" ;
+                                         owl:versionInfo "1.0" ;
+                                         ns1:term_status "testing" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/creator
+dc:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+terms:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+terms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+terms:rights rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+ns1:term_status rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dbpedia.org/ontology/location
+<http://dbpedia.org/ontology/location> rdf:type owl:ObjectProperty ;
+                                       rdfs:domain :Place .
+
+
+###  http://dbpedia.org/ontology/wikiPageExternalLink
+<http://dbpedia.org/ontology/wikiPageExternalLink> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain :Place .
+
+
+###  http://purl.org/marl/0.2/ns#hasPolarity
+<http://purl.org/marl/0.2/ns#hasPolarity> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain prov:Entity .
+
+
+###  http://schema.org/sameAs
+<http://schema.org/sameAs> rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Place .
+
+
+###  http://tour-pedia.org/download/tp.owlcreatedBy
+:createdBy rdf:type owl:ObjectProperty ;
+           owl:inverseOf :hasCreated ;
+           rdfs:domain :Place ;
+           rdfs:range foaf:Person .
+
+
+###  http://tour-pedia.org/download/tp.owlhasCreated
+:hasCreated rdf:type owl:ObjectProperty ;
+            rdfs:domain foaf:Person ;
+            rdfs:range :Place .
+
+
+###  http://tour-pedia.org/download/tp.owl#comment
+:comment rdf:type owl:ObjectProperty ;
+         rdfs:domain foaf:Person .
+
+
+###  http://tour-pedia.org/download/tp.owl#rate
+:rate rdf:type owl:ObjectProperty ;
+      rdfs:domain foaf:Person .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain :Accommodation .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://dbpedia.org/ontology/address
+<http://dbpedia.org/ontology/address> rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain :Place .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain :Place .
+
+
+###  http://www.w3.org/2003/01/geo/wgs84_pos#long
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain :Place .
+
+
+###  http://www.w3.org/2006/vcard/ns#fn
+ns:fn rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Place .
+
+
+###  http://www.w3.org/2006/vcard/ns#hasPhoto
+ns:hasPhoto rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Place .
+
+
+###  http://www.w3.org/2006/vcard/ns#hasTelephone
+ns:hasTelephone rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Place .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/acco/ns#Accommodation
+<http://purl.org/acco/ns#Accommodation> rdf:type owl:Class ;
+                                        owl:equivalentClass :Accommodation .
+
+
+###  http://schema.org/CivicStructure
+<http://schema.org/CivicStructure> rdf:type owl:Class ;
+                                   owl:equivalentClass :POI .
+
+
+###  http://schema.org/LodgingBusiness
+<http://schema.org/LodgingBusiness> rdf:type owl:Class ;
+                                    owl:equivalentClass :Accommodation .
+
+
+###  http://schema.org/Restaurant
+<http://schema.org/Restaurant> rdf:type owl:Class ;
+                               owl:equivalentClass :Restaurant .
+
+
+###  http://schema.org/TouristAttraction
+<http://schema.org/TouristAttraction> rdf:type owl:Class ;
+                                      owl:equivalentClass :Attraction .
+
+
+###  http://tour-pedia.org/download/tp.owlAccommodation
+:Accommodation rdf:type owl:Class ;
+               owl:equivalentClass <http://www.semanticweb.org/ontologies/2010/3/hotel-15072010.owl#Accommodation> ;
+               rdfs:subClassOf :Place ;
+               rdfs:label "Accommodation"@en .
+
+
+###  http://tour-pedia.org/download/tp.owlAttraction
+:Attraction rdf:type owl:Class ;
+            rdfs:subClassOf :Place ;
+            rdfs:label "Attraction"@en .
+
+
+###  http://tour-pedia.org/download/tp.owlPOI
+:POI rdf:type owl:Class ;
+     rdfs:subClassOf :Place ;
+     rdfs:label "POI"@en .
+
+
+###  http://tour-pedia.org/download/tp.owlPlace
+:Place rdf:type owl:Class ;
+       owl:equivalentClass prov:Entity ;
+       rdfs:comment "The generic class for a touristic place." ;
+       rdfs:label "Place" .
+
+
+###  http://tour-pedia.org/download/tp.owlRestaurant
+:Restaurant rdf:type owl:Class ;
+            rdfs:subClassOf :Place ;
+            rdfs:label "Restaurant"@en .
+
+
+:Organization rdf:type owl:Class ;
+          rdfs:subClassOf org:Organization ;
+          rdfs:label "Organization"@en ;
+          rdfs:label "Organizacion"@es .
+
+
+###  http://www.semanticweb.org/ontologies/2010/3/hotel-15072010.owl#Accommodation
+<http://www.semanticweb.org/ontologies/2010/3/hotel-15072010.owl#Accommodation> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+
+###  http://xmlns.com/foaf/0.1/Person
+foaf:Person rdf:type owl:Class .
+
+
+[ ns:fn ""
+] .
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
