@@ -264,7 +264,7 @@ foaf:Person rdf:type owl:Class .
 
 
 :Semerkand_Glaubens_und_Kulturzentrum rdf:type owl:NamedIndividual ,
-               :Place ;
+               :POI ;
                a geo:Geometry ;
                dbpedia-owl:address "" ;
       dbpedia-owl:location dbpedia:Berlin ;
@@ -313,7 +313,7 @@ foaf:Person rdf:type owl:Class .
       wgs:long "13.409723"^^xsd:float .
 
 :linda_carrell rdf:type owl:NamedIndividual ,
-                                                      :Place ;
+                                                      :POI ;
                                              dbpedia-owl:address "Rhinower Str 4" ;
                                              dbpedia-owl:location dbpedia:Berlin ;
                                              dbpedia-owl:wikiPageExternalLink <https://foursquare.com/v/linda-carrell/51797f9de4b070a9d7f205ca> ;
@@ -328,7 +328,7 @@ foaf:Person rdf:type owl:Class .
       wgs:long "13.521826"^^xsd:float .
 
 :a_park rdf:type owl:NamedIndividual ,
-                                                      :Place ;
+                                                      :POI ;
                                              dbpedia-owl:address "" ;
                                              dbpedia-owl:location dbpedia:Berlin ;
                                              dbpedia-owl:wikiPageExternalLink <https://foursquare.com/v/a-park/51798394e4b026eed6c020c3> ;
@@ -344,7 +344,7 @@ foaf:Person rdf:type owl:Class .
       wgs:long "13.521807"^^xsd:float .
 
 :a_park_bei_moppy rdf:type owl:NamedIndividual ,
-                                             :Place ;
+                                             :POI ;
                                              dbpedia-owl:address "" ;
                                              dbpedia-owl:location dbpedia:Berlin ;
                                              dbpedia-owl:wikiPageExternalLink <https://foursquare.com/v/a-park-bei-moppy/5179856fe4b089d6d4fc62df> ;
@@ -361,7 +361,7 @@ foaf:Person rdf:type owl:Class .
       wgs:long "13.521807"^^xsd:float .
 
 :frolic-lounge rdf:type owl:NamedIndividual ,
-                                                      :Place ;
+                                                      :POI ;
                                              dbpedia-owl:address "Rathaus Köpenick" ;
                                              dbpedia-owl:location dbpedia:Berlin ;
                                              dbpedia-owl:wikiPageExternalLink <https://foursquare.com/v/frolic-lounge/51799f4ee4b001f748e6a476> ;
@@ -377,7 +377,7 @@ foaf:Person rdf:type owl:Class .
 
 
 :friedrich-ebert-platz rdf:type owl:NamedIndividual ,
-                                                      :Place ;
+                                                      :POI ;
                                              dbpedia-owl:address "Friedrich-Ebert-Platz" ;
                                              dbpedia-owl:location dbpedia:Berlin ;
                                              dbpedia-owl:wikiPageExternalLink <https://foursquare.com/v/friedrichebertplatz/517a1314e4b0fa32805567b8> ;
@@ -438,7 +438,7 @@ foaf:Person rdf:type owl:Class .
       wgs:long "13.502623"^^xsd:float .
 
 :planschparadies rdf:type owl:NamedIndividual ,
-                                                      :Place ;
+                                                      :POI ;
                                                       a geo:Geometry ;
                                              dbpedia-owl:address "Berlin" ;
                                              dbpedia-owl:location dbpedia:Berlin ;
@@ -456,7 +456,7 @@ foaf:Person rdf:type owl:Class .
       wgs:long "13.416037"^^xsd:float .
 
 :stadtbad_neukoelln rdf:type owl:NamedIndividual ,
-                                                :Place ;
+                                                :POI ;
                                              dbpedia-owl:address "" ;
                                              dbpedia-owl:location dbpedia:Berlin ;
                                              dbpedia-owl:wikiPageExternalLink <https://foursquare.com/v/stadtbad-neukoelln/51c31780498e0a549f7b59ed> ;
@@ -552,7 +552,7 @@ foaf:Person rdf:type owl:Class .
                                              wgs:long "55.28143"^^xsd:float .
 
 :urban_male_lounge rdf:type owl:NamedIndividual ,
-                                                      :Place ;
+                                                      :POI ;
                                              dbpedia-owl:address "DIFC" ;
                                              dbpedia-owl:location dbpedia:Dubai ;
                                              dbpedia-owl:wikiPageExternalLink <https://foursquare.com/v/urban-male-lounge/4cb98f3d4495721eb8f74a7a> ;
